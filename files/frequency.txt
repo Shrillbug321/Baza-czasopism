@@ -1,0 +1,7 @@
+Tygodnik
+Dwutygodnik
+Miesiêcznik
+Dwumiesiêcznik
+Kwartalnik
+Pó³rocznik
+Rocznik
