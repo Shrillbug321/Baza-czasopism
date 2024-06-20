@@ -13,12 +13,8 @@ public class Load
 	{
 		try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(directory)))
 		{
-			T temp = null;
 			while (true)
-			{
-				temp = (T) in.readObject();
-				list.add(temp);
-			}
+				list.add((T) in.readObject());
 		}
 		catch (FileNotFoundException exc)
 		{
@@ -28,7 +24,7 @@ public class Load
 		{	}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d"+exc.toString());
+			System.out.println("BÅ‚Ä…d"+exc);
 		}
 		catch (ClassNotFoundException exc)
 		{
@@ -55,7 +51,7 @@ public class Load
 		{	}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d!");
+			System.out.println("BÅ‚Ä…d!");
 		}
 	}
 	
@@ -74,7 +70,7 @@ public class Load
 		{	}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d!");
+			System.out.println("BÅ‚Ä…d!");
 		}
 		return name;
 	}
@@ -84,13 +80,8 @@ public class Load
 		String name = null;
 		try (BufferedReader in = new BufferedReader(new FileReader(directory)))
 		{
-			int i=1;
-			while (i<lineNumber)
-			{
+			for (int i=1; i<=lineNumber; i++)
 				name = in.readLine();
-				i++;
-			}
-			name = in.readLine();
 		}
 		catch (FileNotFoundException exc)
 		{
@@ -100,7 +91,7 @@ public class Load
 		{	}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d!");
+			System.out.println("BÅ‚Ä…d!");
 		}
 		return name;
 	}

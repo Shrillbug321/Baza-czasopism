@@ -42,15 +42,13 @@ public class TableMagazinesSelectionEvent extends TableInAddSelectionEvent
 			}
 			
 			if (panel.getComponents().length>1)
-			{
 				panel.remove(panel.getComponent(1));
-			}
 			String numbersHeader[] = {"Numery"};
 			TableInAdd numbersList = new TableInAdd(numbersHeader, "files/tempnumbers.txt");
 			if (numbersList.getRowCount() == 0)
 			{
 				JFrame frame = Frame.getMain();
-				JOptionPane.showMessageDialog(frame, "Lista numerów jest pusta.",
+				JOptionPane.showMessageDialog(frame, "Lista numerÃ³w jest pusta.",
 						"Informacja", JOptionPane.INFORMATION_MESSAGE);
 				return;
 			}

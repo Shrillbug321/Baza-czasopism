@@ -9,9 +9,9 @@ public class Clear
 	public static void panel()
 	{
 		JFrame frame = Frame.getMain();
-		int i=1; //dla i=0 mamy pasek narzêdziowy
+		int i=1; //i=0 is a toolbox
 		while (i<frame.getContentPane().getComponentCount())
-		{ //usuwa wszystko poza paskiem aby elementy nie nachodzi³y na siebie
+		{
 			frame.getContentPane().remove(i);
 			i++;
 		}

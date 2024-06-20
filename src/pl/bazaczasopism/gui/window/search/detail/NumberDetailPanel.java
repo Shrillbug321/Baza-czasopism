@@ -43,16 +43,18 @@ public class NumberDetailPanel extends JPanel
 	
 	private JTable createTable(ContentPage content) throws EmptyContentPageException
 	{
-		String columnsName[] = {"Tytu≥", "Strona"};
+		String[] columnsName = {"Tytu≈Ç", "Strona"};
 		int COLUMNS_NUMBER = 2;
-		Object data[][];
+		Object[][] data;
 		List<List<String>> list = new ArrayList<List<String>>();		
 		for (int i=0; i<COLUMNS_NUMBER; i++)
 		{
 			list.add(new ArrayList<String>());
 		}
+
 		if (content.getSize() == 0)
 			throw new EmptyContentPageException();
+
 		for (int i=0; i<content.getSize(); i++)
 		{
 			list.get(0).add(content.getHeader(i));
@@ -68,7 +70,6 @@ public class NumberDetailPanel extends JPanel
 				data[i][j] = list.get(j).get(i);
 			}
 		}
-		JTable table = new JTable(new NotEditableTableModel(data, columnsName));
-		return table;
+		return new JTable(new NotEditableTableModel(data, columnsName));
 	}
 }

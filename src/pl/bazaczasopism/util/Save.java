@@ -9,22 +9,13 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.List;
 
-import pl.bazaczasopism.util.AppendingObjectOutputStream;
 public class Save implements Serializable
 {
 	static public void oneObject(String directory, Object object)
 	{
-		ObjectOutputStream out;
 		try
 		{
-			if (FileExists.exists(directory))
-			{
-				out = new AppendingObjectOutputStream(new FileOutputStream(directory, true));
-			}
-			else
-			{
-				out = new ObjectOutputStream(new FileOutputStream(directory));
-			}
+			ObjectOutputStream out = new AppendingObjectOutputStream(new FileOutputStream(directory, FileExists.exists(directory)));
 			out.writeObject(object);
 		}
 		catch (FileNotFoundException exc)
@@ -33,20 +24,16 @@ public class Save implements Serializable
 		}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d "+exc.getMessage());
+			System.out.println("BÅ‚Ä…d "+exc.getMessage());
 		}
 	}
-	
+
 	static public <T> void objects(String directory, List<T> objects)
 	{
 		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(directory)))
 		{
-			int i=0;
-			while(i<objects.size())
-			{
+            for (int i = 0; i < objects.size(); i++)
 				out.writeObject(objects.get(i));
-				i++;
-			}
 		}
 		catch (FileNotFoundException exc)
 		{
@@ -54,10 +41,10 @@ public class Save implements Serializable
 		}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d "+exc.getMessage());
+			System.out.println("BÅ‚Ä…d "+exc.getMessage());
 		}
 	}
-	
+
 	static public void line(String directory, String name, boolean append)
 	{
 		try (BufferedWriter out = new BufferedWriter(new FileWriter(directory, append)) )
@@ -71,7 +58,7 @@ public class Save implements Serializable
 		}
 		catch (IOException exc)
 		{
-			System.out.println("B³¹d "+exc.getMessage());
+			System.out.println("BÅ‚Ä…d "+exc.getMessage());
 		}
 	}
 }

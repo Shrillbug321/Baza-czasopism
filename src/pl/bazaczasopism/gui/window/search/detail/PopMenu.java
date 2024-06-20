@@ -12,7 +12,7 @@ public class PopMenu extends JPopupMenu
 {
 	public PopMenu(JTable tableNumbers, List<MagazineNumber> magazineNumbers)
 	{
-		JMenuItem m1 = new NumberDetailMenuItem("Szczeg�y");
+		JMenuItem m1 = new NumberDetailMenuItem("Szczegóły");
 		m1.addMouseListener(new NumberDetailMenuItemEvent(tableNumbers, magazineNumbers));
 		add(m1);
 	}

@@ -19,10 +19,12 @@ public class CloseWindowEvent extends WindowAdapter
 	public void windowClosing(WindowEvent e) 
 	{
 		JFrame frame = Frame.getMain();
-		Object options[]= {"Tak", "Nie"};
-		if (JOptionPane.showOptionDialog(frame, "Czy na pewno chcesz opuœciæ program?", "Zamkniêcie",
+		Object[] options = {"Tak", "Nie"};
+		if (JOptionPane.showOptionDialog(frame, "Czy na pewno chcesz opuÅ›ciÄ‡ program?", "ZamkniÄ™cie",
 			JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == 1)
+		{
 			frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		}
 		else
 		{
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

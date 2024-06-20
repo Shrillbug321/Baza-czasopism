@@ -9,13 +9,15 @@ public class TablePanel extends JPanel
 {
 	public TablePanel()
 	{
-		String publisherHeader[]= {"Wydawnictwo"};
+		String[] publisherHeader= {"Wydawnictwo"};
 		TableInAdd publisherTable = new TableInAdd(publisherHeader, "files/publishers.txt");
 		add(new ScrollBar(publisherTable));
-		String frequencyHeader[]= {"Czêstoœæ"};
+
+		String[] frequencyHeader= {"CzÄ™stoÅ›Ä‡"};
 		TableInAdd frequencyTable = new TableInAdd(frequencyHeader, "files/frequency.txt");
 		add(new ScrollBar(frequencyTable));
-		String typeHeader[]= {"Rodzaj"};
+
+		String[] typeHeader= {"Rodzaj"};
 		TableInAdd typeTable = new TableInAdd(typeHeader, "files/types.txt");
 		add(new ScrollBar(typeTable));
 	}

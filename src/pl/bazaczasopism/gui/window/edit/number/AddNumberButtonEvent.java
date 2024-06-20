@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 import pl.bazaczasopism.Magazine;
 import pl.bazaczasopism.MagazineNumber;
@@ -23,6 +22,7 @@ public class AddNumberButtonEvent extends ButtonEvent
 	private LabeledTextField numberInput;
 	private LabeledTextField yearInput;
 	private JFrame frame = Frame.getMain();
+	
 	protected AddNumberButtonEvent( LabeledTextField numberInput, LabeledTextField yearInput) 
 	{
 		this.numberInput = numberInput;
@@ -45,15 +45,17 @@ public class AddNumberButtonEvent extends ButtonEvent
 			catch (NumberFormatException exc)
 			{
 				JOptionPane.showMessageDialog(frame, "Nie wybrano czasopisma.",
-						"B³¹d", JOptionPane.ERROR_MESSAGE);
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			try
 			{
-				if (numberInput.getText().equals(""))
+				if (numberInput.getText().isEmpty())
 					throw new EmptyFieldException(1);
-				if (yearInput.getText().equals(""))
+				
+				if (yearInput.getText().isEmpty())
 					throw new EmptyFieldException(2);
+				
 				number = Integer.parseInt(numberInput.getText());
 				year = Integer.parseInt(yearInput.getText());
 				if (year < 1500 || year > 2020)
@@ -65,8 +67,8 @@ public class AddNumberButtonEvent extends ButtonEvent
 			}
 			catch (NumberFormatException exc)
 			{
-				JOptionPane.showMessageDialog(frame, "Numer lub rok wydania zawiera literê.",
-						"B³¹d", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "Numer lub rok wydania zawiera literÄ™.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			numberInput.setText("");
@@ -78,13 +80,13 @@ public class AddNumberButtonEvent extends ButtonEvent
 			Save.objects("files/magazines.dat", magazines);
 			
 			System.out.println("Dodano");
-			JOptionPane.showMessageDialog(frame, "Pomyœlnie dodano numer czasopisma.", "Informacja",
+			JOptionPane.showMessageDialog(frame, "PomyÅ›lnie dodano numer czasopisma.", "Informacja",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
-		catch(Exception exc)
+		catch (Exception exc)
 		{
-			JOptionPane.showMessageDialog(frame, "Nie uda³o siê dodaæ numeru czasopisma.",
-					"Ostrze¿enie", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(frame, "Nie udaÅ‚o siÄ™ dodaÄ‡ numeru czasopisma.",
+					"OstrzeÅ¼enie", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }

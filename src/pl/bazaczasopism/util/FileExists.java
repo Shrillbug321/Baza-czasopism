@@ -5,8 +5,8 @@ public class FileExists
 {
 	static public boolean exists(String directory)
 	{
-		try(FileReader fr = new FileReader(directory))
-		{			
+		try(FileReader ignored = new FileReader(directory))
+		{
 			return true;
 		}
 		catch (IOException exc)

@@ -11,6 +11,6 @@ public class NotValidYear extends Exception
 	{
 		JFrame frame = Frame.getMain();
 		JOptionPane.showMessageDialog(frame, "Niepoprawny rok.",
-				"B³¹d", JOptionPane.ERROR_MESSAGE);
+				"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 	}
 }

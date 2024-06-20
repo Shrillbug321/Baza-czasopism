@@ -16,6 +16,7 @@ public class PopMenuEvent extends MouseAdapter
 		this.popMenu = popMenu;
 		this.table = table;
 	}
+
 	public void mouseReleased(MouseEvent e)
 	{
 		if (SwingUtilities.isRightMouseButton(e))

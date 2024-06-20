@@ -10,7 +10,7 @@ public class EmptyContentPageException extends Exception
 	public EmptyContentPageException()
 	{
 		JFrame frame = Frame.getMain();
-		JOptionPane.showMessageDialog(frame, "Spis treúci jest pusty.",
+		JOptionPane.showMessageDialog(frame, "Spis tre≈õci jest pusty.",
 				"Informacja", JOptionPane.INFORMATION_MESSAGE);
 	}
 }

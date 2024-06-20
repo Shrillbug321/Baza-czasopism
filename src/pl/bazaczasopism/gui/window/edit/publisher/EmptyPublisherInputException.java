@@ -9,7 +9,7 @@ public class EmptyPublisherInputException extends Exception
 	EmptyPublisherInputException()
 	{
 		JFrame frame = Frame.getMain();
-		JOptionPane.showMessageDialog(frame, "Nazwa wydawnictwa nie mo¿e byæ pusta.",
-				"B³¹d", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Nazwa wydawnictwa nie moÅ¼e byÄ‡ pusta.",
+				"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 	}
 }

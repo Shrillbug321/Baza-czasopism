@@ -11,7 +11,7 @@ public class NumberPanel extends JPanel
 {
 	public NumberPanel(JPanel panel)
 	{
-		String magazinesHeader[] = {"Czasopismo"};
+		String[] magazinesHeader = {"Czasopismo"};
 		TableInAdd magazinesList = new TableInAdd(magazinesHeader, "files/magazines.txt");
 		add(new ScrollBar(magazinesList));
 		LabeledTextField numberInput = new LabeledTextField("Numer");

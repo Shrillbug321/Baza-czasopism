@@ -10,7 +10,7 @@ public class Frame extends JFrame
 	static JFrame main;
 	public Frame(boolean isMain)
 	{
-		if (isMain == true)
+		if (isMain)
 			setMain();
 		setVisible(true);
 		setSize(640, 480);

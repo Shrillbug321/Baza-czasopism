@@ -4,7 +4,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class NotEditableTableModel extends DefaultTableModel
 {
-	public NotEditableTableModel (Object data[][], String columnName[])
+	public NotEditableTableModel (Object[][] data, String[] columnName)
 	{
 		super(data, columnName);
 	}

@@ -1,7 +1,7 @@
 Tygodnik
 Dwutygodnik
-Miesiêcznik
-Dwumiesiêcznik
+MiesiÄ™cznik
+DwumiesiÄ™cznik
 Kwartalnik
-Pó³rocznik
+PÃ³Å‚rocznik
 Rocznik

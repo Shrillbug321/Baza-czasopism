@@ -28,7 +28,7 @@ public class DetailPanel extends JPanel
 		Load.objects("files/magazines.dat", magazines);
 		int magazineIndex = Integer.parseInt(Load.line("files/tempmagindex.txt", index+1));
 		Magazine magazine = magazines.get(magazineIndex);
-		magazines = null;
+
 		ArrayList<MagazineNumber> magazineNumbers = magazine.getNumbers();
 		Save.objects("files/tempnumbers.dat", magazineNumbers);
 		for (int i=0; i<magazineNumbers.size(); i++)
@@ -38,7 +38,7 @@ public class DetailPanel extends JPanel
 		
 		setTextFields(firstPanel, magazine);
 		
-		String numbersHeader[] = {"Numery"};
+		String[] numbersHeader = {"Numery"};
 		JTable numbersList = new TableNumbers(numbersHeader, "files/tempnumbers.txt", magazineNumbers);
 		
 		firstPanel.add(new ScrollBar(numbersList));
@@ -55,9 +55,9 @@ public class DetailPanel extends JPanel
 		publisher.setText(magazine.getPublisher());
 		LabeledTextField type = new LabeledTextField("Rodzaj", false);
 		type.setText(magazine.getType());
-		LabeledTextField frequency = new LabeledTextField("Czêstoœæ", false);
+		LabeledTextField frequency = new LabeledTextField("CzÄ™stoÅ›Ä‡", false);
 		frequency.setText(magazine.getFrequency());
-		LabeledTextField numbers = new LabeledTextField("Liczba numerów", false);
+		LabeledTextField numbers = new LabeledTextField("Liczba numerÃ³w", false);
 		numbers.setText(Integer.toString(magazine.getNumbers().size()));
 		LabeledTextField issn = new LabeledTextField("ISSN", false);
 		issn.setText(magazine.getIssn());

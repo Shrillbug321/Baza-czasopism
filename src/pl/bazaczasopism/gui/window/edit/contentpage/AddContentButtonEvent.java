@@ -43,7 +43,7 @@ public class AddContentButtonEvent extends ButtonEvent
 			catch (NumberFormatException exc)
 			{
 				JOptionPane.showMessageDialog(frame, "Nie wybrano czasopisma.",
-						"B³¹d", JOptionPane.ERROR_MESSAGE);
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			try 
@@ -53,17 +53,16 @@ public class AddContentButtonEvent extends ButtonEvent
 			catch (NumberFormatException exc)
 			{
 				JOptionPane.showMessageDialog(frame, "Nie wybrano numeru.",
-						"B³¹d", JOptionPane.ERROR_MESSAGE);
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			String header;
 			String page;
 			try
 			{
-				
-				if (headerInput.getText().equals(""))
+				if (headerInput.getText().isEmpty())
 					throw new EmptyFieldException(1);
-				if (pageInput.getText().equals(""))
+				if (pageInput.getText().isEmpty())
 					throw new EmptyFieldException(2);
 				checkPage(pageInput.getText());
 				header = headerInput.getText();
@@ -81,13 +80,13 @@ public class AddContentButtonEvent extends ButtonEvent
 			getContentPage().add(header, page);
 			Save.objects("files/magazines.dat", magazines);
 			
-			JOptionPane.showMessageDialog(frame, "Pomyœlnie dodano pozycjê spisu treœci.", "Informacja",
+			JOptionPane.showMessageDialog(frame, "PomyÅ›lnie dodano pozycjÄ™ spisu treÅ›ci.", "Informacja",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
-		catch(Exception exc)
+		catch (Exception exc)
 		{
-			JOptionPane.showMessageDialog(frame, "Nie uda³o siê dodaæ pozycji spisu treœci.",
-					"Ostrze¿enie", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(frame, "Nie udaÅ‚o siÄ™ dodaÄ‡ pozycji spisu treÅ›ci.",
+					"OstrzeÅ¼enie", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
@@ -95,7 +94,7 @@ public class AddContentButtonEvent extends ButtonEvent
 	{
 		for (int i=0; i<pageInput.length(); i++)
 		{
-			if ( pageInput.charAt(i) < 48 || pageInput.charAt(i) > 59 )
+			if (pageInput.charAt(i) < 48 || pageInput.charAt(i) > 59)
 				throw new NotValidPageException();
 		}
 	}

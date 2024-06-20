@@ -10,7 +10,7 @@ public class NotFoundMagazineException extends Exception
 	public NotFoundMagazineException()
 	{
 		JFrame frame = Frame.getMain();
-			JOptionPane.showMessageDialog(frame, "Nie znaleziono szukanego czasopisma.",
-				"Informacja", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Nie znaleziono szukanego czasopisma.",
+			"Informacja", JOptionPane.INFORMATION_MESSAGE);
 	}
 }

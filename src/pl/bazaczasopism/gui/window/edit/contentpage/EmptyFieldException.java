@@ -12,14 +12,14 @@ public class EmptyFieldException extends Exception
 		JFrame frame = Frame.getMain();
 		switch (i)
 		{
-		case 1:
-			JOptionPane.showMessageDialog(frame, "Tytu³ nie mo¿e byæ pusty.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
-		case 2:
-			JOptionPane.showMessageDialog(frame, "Numer strony nie mo¿e byæ pusty.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
+			case 1:
+				JOptionPane.showMessageDialog(frame, "TytuÅ‚ nie moÅ¼e byÄ‡ pusty.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
+			case 2:
+				JOptionPane.showMessageDialog(frame, "Numer strony nie moÅ¼e byÄ‡ pusty.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
 		}
 	}
 }

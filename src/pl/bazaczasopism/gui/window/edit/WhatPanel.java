@@ -14,6 +14,6 @@ public class WhatPanel extends JPanel
 		add(new AddPublisherPanelButton("Wydawnictwo", this));
 		add(new AddMagazinePanelButton("Czasopismo", this));
 		add(new AddNumberPanelButton("Numer", this));
-		add(new AddContentPanelButton("Spis treúci", this));
+		add(new AddContentPanelButton("Spis tre≈õci", this));
 	}
 }

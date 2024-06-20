@@ -16,7 +16,7 @@ public class TableMagazines extends TableInAdd
 		this.directory = directory;
 		Load.names(directory, rows);
 		data = new Object[rows.size()-1][1];
-		for(int i=0; i<rows.size()-1; i++)
+		for (int i=0; i<rows.size()-1; i++)
 		{
 			data[i][0]=rows.get(i);
 		}

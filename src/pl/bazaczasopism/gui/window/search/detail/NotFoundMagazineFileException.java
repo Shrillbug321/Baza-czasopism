@@ -10,7 +10,7 @@ public class NotFoundMagazineFileException extends Exception
 	public NotFoundMagazineFileException()
 	{
 		JFrame frame = Frame.getMain();
-		JOptionPane.showMessageDialog(frame, "Nie dodano jeszcze ¿adnego czasopisma.",
-				"B³¹d", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Nie dodano jeszcze ï¿½adnego czasopisma.",
+				"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 	}
 }

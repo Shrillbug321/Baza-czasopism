@@ -10,7 +10,7 @@ public class NotValidPageException extends Exception
 	NotValidPageException()
 	{
 		JFrame frame = Frame.getMain();
-		JOptionPane.showMessageDialog(frame, "Numer strony nie mo¿e zawieraæ liter.",
-				"B³¹d", JOptionPane.ERROR_MESSAGE);
+		JOptionPane.showMessageDialog(frame, "Numer strony nie moÅºe zawieraÄ‡ liter.",
+				"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 	}	
 }

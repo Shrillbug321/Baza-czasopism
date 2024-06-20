@@ -41,9 +41,9 @@ public class AddMagazineButtonEvent extends ButtonEvent
 			{
 				magazineName = magazineInput.getText();
 				issnNumber = issnInput.getText();
-				if (magazineName.equals(""))
+				if (magazineName.isEmpty())
 					throw new EmptyFieldException(1);
-				if (issnNumber.equals(""))
+				if (issnNumber.isEmpty())
 					throw new EmptyFieldException(2);
 			}
 			catch (EmptyFieldException exc)
@@ -73,8 +73,8 @@ public class AddMagazineButtonEvent extends ButtonEvent
 			}
 			catch (NullPointerException | NumberFormatException exc)
 			{
-				JOptionPane.showMessageDialog(frame, "Nie wybrano wszystkich wartoœci z list.",
-						"B³¹d", JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "Nie wybrano wszystkich wartoÅ›ci z list.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 			
@@ -88,13 +88,13 @@ public class AddMagazineButtonEvent extends ButtonEvent
 			Save.line("files/magazines.txt", magazine.getName(), true);
 			
 			System.out.println("Dodano");
-			JOptionPane.showMessageDialog(frame, "Pomyœlnie dodano czasopismo.", "Informacja",
+			JOptionPane.showMessageDialog(frame, "PomyÅ›lnie dodano czasopismo.", "Informacja",
 					JOptionPane.INFORMATION_MESSAGE);
 		}
 		catch (Exception exc)
 		{
-			JOptionPane.showMessageDialog(frame, "Nie uda³o siê dodaæ czasopisma.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(frame, "Nie udaÅ‚o siÄ™ dodaÄ‡ czasopisma.",
+					"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
@@ -105,7 +105,7 @@ public class AddMagazineButtonEvent extends ButtonEvent
 			if (issnNumber.charAt(i) < 48 || issnNumber.charAt(i) > 59)
 				throw new NotValidIssn(2);
 		}
-		if ( (issnNumber.charAt(6) < 48 || issnNumber.charAt(6) > 59) && issnNumber.charAt(6) !='X')
+		if ((issnNumber.charAt(6) < 48 || issnNumber.charAt(6) > 59) && issnNumber.charAt(6) != 'X')
 			throw new NotValidIssn(2);
 	}
 }

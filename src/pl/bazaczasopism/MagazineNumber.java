@@ -20,21 +20,19 @@ public class MagazineNumber implements Serializable
 	
 	private void calculateEan(String issn)
 	{
-		int convert[] = new int[7];
+		int[] convert = new int[7];
 		int sum = 0;
 		for (int i=0; i<6; i++)
-		{
 			convert[i] = Integer.parseInt(issn.substring(i, i+1));
-		}
-		if(issn.charAt(6) == 'X')
+
+		if (issn.charAt(6) == 'X')
 			convert[6] = 10;
 		else
 			convert[6] = Integer.parseInt(issn.substring(6, 7));
 		ean = "977" + issn + (year%10) + "5";
 		for (int i=0, j=8; i<7; i++, j--)
-		{
 			sum += convert[i]*j;
-		}
+
 		if (sum%11 == 0) 
 			ean += "0"; 
 		else	

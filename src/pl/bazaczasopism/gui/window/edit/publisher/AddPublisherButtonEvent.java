@@ -41,13 +41,13 @@ public class AddPublisherButtonEvent extends ButtonEvent
 			Save.oneObject("files/publishers.dat", publisher);
 			Save.line("files/publishers.txt", publisher.getName(), true);
 			
-			JOptionPane.showMessageDialog(frame, "Pomyœlnie dodano wydawnictwo.",
+			JOptionPane.showMessageDialog(frame, "PomyÅ›lnie dodano wydawnictwo.",
 					"Informacja", JOptionPane.INFORMATION_MESSAGE);
 		}
 		catch (Exception exc)
 		{
-			JOptionPane.showMessageDialog(frame, "Nie uda³o siê dodaæ wydawnictwa.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(frame, "Nie udaÅ‚o siÄ™ dodaÄ‡ wydawnictwa.",
+					"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }

@@ -4,7 +4,6 @@ import java.awt.GridLayout;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class LabeledTextField extends JPanel
 {
@@ -17,8 +16,7 @@ public class LabeledTextField extends JPanel
 	}
 	public LabeledTextField(String label, boolean editable)
 	{
-		if (editable == false) 
-			textField.setEditable(false);
+		textField.setEditable(editable);
 		add(new JLabel(label));
 		setLayout( new GridLayout(2, 1) );
 		add(textField);

@@ -7,7 +7,7 @@ public class DetailMenuItem extends JMenuItem
 {
 	public DetailMenuItem(JTable table)
 	{
-		super("Szczeg�y");
+		super("Szczegóły");
 		addMouseListener(new DetailMenuItemEvent(table));
 	}
 }

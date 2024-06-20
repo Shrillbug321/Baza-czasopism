@@ -12,14 +12,14 @@ public class EmptyFieldException extends Exception
 		JFrame frame = Frame.getMain();
 		switch (i)
 		{
-		case 1:
-			JOptionPane.showMessageDialog(frame, "Nazwa czasopisma nie mo¿e byæ pusta.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
-		case 2:
-			JOptionPane.showMessageDialog(frame, "Numer ISSN nie mo¿e byæ pusty.",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
+			case 1:
+				JOptionPane.showMessageDialog(frame, "Nazwa czasopisma nie moÅ¼e byÄ‡ pusta.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
+			case 2:
+				JOptionPane.showMessageDialog(frame, "Numer ISSN nie moÅ¼e byÄ‡ pusty.",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
 		}
 	}
 }

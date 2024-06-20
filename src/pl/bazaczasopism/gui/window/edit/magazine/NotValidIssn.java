@@ -11,14 +11,14 @@ public class NotValidIssn extends Exception{
 		JFrame frame = Frame.getMain();
 		switch (i)
 		{
-		case 1:
-			JOptionPane.showMessageDialog(frame, "Niepoprawny numer ISSN \n(powinien mieæ 7 cyfr).",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
-		case 2:
-			JOptionPane.showMessageDialog(frame, "Numer ISSN nie zawiera liter \n(oprócz wielkiego X na koñcu).",
-					"B³¹d", JOptionPane.ERROR_MESSAGE);
-			break;
+			case 1:
+				JOptionPane.showMessageDialog(frame, "Niepoprawny numer ISSN \n(powinien mieÄ‡ 7 cyfr).",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
+			case 2:
+				JOptionPane.showMessageDialog(frame, "Numer ISSN nie zawiera liter \n(oprÃ³cz wielkiego X na koÅ„cu).",
+						"BÅ‚Ä…d", JOptionPane.ERROR_MESSAGE);
+				break;
 		}
 	}
 }

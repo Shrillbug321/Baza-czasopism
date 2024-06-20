@@ -9,7 +9,7 @@ import pl.bazaczasopism.gui.tables.TableInAdd;
 
 public class TableNumbers extends TableInAdd
 {
-	public TableNumbers(String columnsName[], String directory, List<MagazineNumber> magazineNumbers)
+	public TableNumbers(String[] columnsName, String directory, List<MagazineNumber> magazineNumbers)
 	{
 		super(columnsName, directory);
 		JPopupMenu popMenu = new PopMenu(this, magazineNumbers);

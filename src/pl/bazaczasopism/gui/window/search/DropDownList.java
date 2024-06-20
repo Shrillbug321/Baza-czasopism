@@ -4,7 +4,7 @@ import javax.swing.JComboBox;
 
 public class DropDownList extends JComboBox<String>
 {
-	private static String list[] = {"Czasopismo", "Wydawnictwo", "Rodzaj", "Czêstoœæ"};
+	private static String[] list = {"Czasopismo", "Wydawnictwo", "Rodzaj", "CzÄ™stoÅ›Ä‡"};
 	public DropDownList()
 	{
 		super(list);

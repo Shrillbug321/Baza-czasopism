@@ -18,7 +18,7 @@ public class PopMenuEvent extends MouseAdapter
 	}
 	public void mouseReleased(MouseEvent e)
 	{
-		if(SwingUtilities.isRightMouseButton(e))
+		if (SwingUtilities.isRightMouseButton(e))
 		{
 			popMenu.show(e.getComponent(), e.getX(), e.getY());
 			int index = table.rowAtPoint(e.getPoint()); 

@@ -9,7 +9,7 @@ public class ContentPanelInputs extends JPanel
 {
 	public ContentPanelInputs(JPanel panel)
 	{
-		LabeledTextField header = new LabeledTextField("Tytu≥");
+		LabeledTextField header = new LabeledTextField("Tytu≈Ç");
 		add(header);
 		LabeledTextField page = new LabeledTextField("Numer strony");
 		add(page);
